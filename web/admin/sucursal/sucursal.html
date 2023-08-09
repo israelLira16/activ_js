@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="description" content="P&aacute;gina SICEFA Central">
+        <meta name="keywords" content="Sucursales, Productos y Seguimiento de pedidos de compras ">
+        <meta name="author" content="Andrea Gudalupe Concha D&iacute;az   22000944,
+              Alondra Goretti Martinez Saldaña     22001414,
+              Israel de Jesús Lira Navarro         22001353,
+              Angela Guadalupe Fernandez Gonzalez  22002375,
+              Brian Fernando Torres Chico          22001691 ">
+
+        <!-- Agregamos las referencias de Boostrap -->
+        <link rel="stylesheet" href="style/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="style/bootstrap/css/bootstrap-utilities.min.css">
+        <link rel="stylesheet" href="style/bootstrap/css/bootstrap-grid.min.css">
+        <!-- Agregamos la referencia  de SweetAlert2 -->
+
+        <link rel="stylesheet" href="style/sweetalert2/sweetalert2.min.css">
+
+        <!-- Link para los iconos -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+        <style>
+            .card{
+
+                margin: auto;
+                background: #eee;
+
+                border: 2px solid transparent;
+
+                -moz-border-image: -moz-linear-gradient(top, #3acfd5 0%, #3a4ed5 100%);
+                -webkit-border-image: -webkit-linear-gradient(top, #3acfd5 0%, #3a4ed5 100%);
+                border-image: linear-gradient(to bottom, #3acfd5 0%, #3a4ed5 100%);
+
+                border-image-slice: 1;
+            }
+        </style>
+
+
+    </head>
+    <body>
+        <div class="row">
+            <div class="col-12 mt-2">
+                <div class="card">
+                    <div class="card-header d-flex justify-content-center">
+                        <h3>M&oacute;dulo de control de Sucursal</h3> 
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h4>Detalle de Sucursal</h4>
+                                    </div>
+                                    <div class="card-body mt-2">
+                                        <div class="form">
+                                            <div class="row">
+                                                <div class="col-4">
+                                                    <div class="form-floating mb-3">
+                                                        <input type="text" class="form-control" id="txtNombre" placeholder="Nombre de la sucursal:">
+                                                        <label class="form-label" for="txtNombre">Nombre de la sucursal:</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="form-floating mb-3">
+                                                        <input type="text" class="form-control" id="txtTitular" placeholder="Titular:">
+                                                        <label class="form-label" for="txtTitular">Titular:</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="form-floating mb-3">
+                                                        <input type="text" class="form-control" id="txtRfc" placeholder="RFC:">
+                                                        <label class="form-label" for="txtRfc">RFC:</label>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="row mt-2">
+                                                <div class="col-3">
+                                                    <div class="form-floating mb-3">
+                                                        <input type="text" class="form-control" id="txtDomicilio" placeholder="Domicilio:">
+                                                        <label class="form-label" for="txtDomicilio">Domicilio:</label>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-3">
+                                                    <div class="form-floating mb-3">
+                                                        <input type="text" class="form-control" id="txtColonia" placeholder="Colonia:">
+                                                        <label class="form-label" for="txtColonia">Colonia:</label>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-3">
+                                                    <div class="form-floating mb-3">
+                                                        <input type="text" class="form-control" id="txtCodigoPostal" placeholder="Codigo Postal:">
+                                                        <label class="form-label" for="txtCodigoPostal">Codigo Postal:</label>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-3">
+                                                    <div class="form-floating mb-3">
+                                                        <input type="text" class="form-control" id="txtCiudad" placeholder="Ciudad:">
+                                                        <label class="form-label" for="txtCiudad:">Ciudad:</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row mt-2">
+                                                <div class="col-4">
+                                                    <div class="form-floating mb-3">
+                                                        <input type="text" class="form-control" id="txtEstado" placeholder="Estado:">
+                                                        <label class="form-label" for="txtEstado">Estado:</label>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-4">
+                                                    <div class="form-floating mb-3">
+                                                        <input type="text" class="form-control" id="txtEstatus" placeholder="Estatus:">
+                                                        <label class="form-label" for="txtEstatus">Estatus:</label>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-4">
+                                                    <div class="form-floating mb-3">
+                                                        <input type="text" class="form-control" id="txtTelefono" placeholder="Telefono:">
+                                                        <label class="form-label" for="txtTelefono">Telefono:</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row mt-2">
+                                                <div class="col-6">
+                                                    <div class="form-floating mb-3">
+                                                        <input type="text" class="form-control" id="txtEstado" placeholder="Estado:">
+                                                        <label class="form-label" for="txtEstado">Latitud:</label>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-6">
+                                                    <div class="form-floating mb-3">
+                                                        <input type="text" class="form-control" id="txtEstatus" placeholder="Estatus:">
+                                                        <label class="form-label" for="txtEstatus">Longitud:</label>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+
+
+
+
+                                            <div class="row mt-3">
+                                                <div class="col-12 justify-content-center">
+
+                                                    <div class="text-center">
+                                                        <button class="btn btn-primary me-2"><i class="bi bi-bookmark">   Guardar</i></button>
+                                                        <button class="btn btn-danger ms-2 me-2"><i class="bi bi-trash3"></i>   Eliminar</button>
+                                                        <button class="btn btn-success ms-2 me-2"><i class="bi bi-plus-circle"></i>  Nuevo</button>
+
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h4>Catalogo de Sucursal</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <table class="table table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>Nombre</th>
+                                                    <th>Titular</th>
+                                                    <th>RFC</th>
+                                                    <th>Domicilio</th>
+                                                    <th>Codigo Postal</th>
+                                                    <th>Telefono</th>
+                                                </tr>
+                                            </thead>
+
+                                            <tbody>
+                                                <tr>
+                                                    <td>Sucursal Central</td>
+                                                    <td>Medicamos tu Vida</td>
+                                                    <td>CUPU800825569</td>
+                                                    <td>Real Delta Mina Calderones 398-A</td>
+                                                    <td>20250</td>
+                                                    <th>+5214741475</th>
+                                                </tr>
+
+
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </body>
+</html>
